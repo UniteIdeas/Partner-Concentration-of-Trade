@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Partner Concentration Trade : 2013</title>
+
+    <link type="text/csess" rel="stylesheet" href="css/ui.jqgrid.css"/>
+    <link type="text/css" rel="stylesheet" href="css/jquery-ui.css"/>
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+
+    <script src="js/lib/d3.min.js"></script>
+    <script type="text/javascript" src="js/lib/crossfilter.min.js"></script>
+    <script type="text/javascript" src="js/lib/dc.js"></script>
+    <script src="js/lib/crossfilter.min.js"></script>
+    <script src="js/lib/jquery-1.10.1.min.js"></script>
+    <script src="js/lib/jquery.jqGrid.min.js"></script>
+
+    <script src="js/clsPartnerConcentrationChart.js"></script>
+    <script src="js/clsDataLoader.js"></script>
+    <script src="js/clsDataMgr.js"></script>
+    <script src="js/clsCountryChart.js"></script>
+    <script src="js/clsFileLoader.js"></script>
+    <script src="js/clsTableWindow.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+</head>
+<body onload="bootstrap()">
+    <table width="100%" cellspacing="0" cellpadding="0">
+        <tr>
+            <td valign="top" width="270px">
+                <div class="country-chart-title">International Trade Statistics Yearbook<br> <b>2013</b> | By Country</div>
+
+            </td>
+            <td valign="top">
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <div class="chart-outer-container">
+                    <div class="country-chart-subtitle">SELECT A COUNTRY:</div>
+                    <div class="country-chart-sorting">
+                        <table width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td width="55px">Sort By: </td>
+                                <td width="55px">
+                                    <div id="mission-sort-by-demand" class="missions-btn filter-btn-selected">Demand</div>
+                                </td>
+                                <td width="50px">
+                                    <div id="mission-sort-by-name" class="missions-btn">A-Z</div>
+                                </td>
+                                <td align="right"> &nbsp;
+                                    <!--<div id="missions-reset" class="reset-btn">RESET</div>-->
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="country-chart"></div>
+                </div>
+            </td>
+            <td valign="top">
+                <div class="page-right-pane">
+                    <div id="slected-country-name" class="slected-country-name"></div>
+                    <div class="trade-chart-title">PARTNER CONCENTRATION OF TRADE IN 2013</div>
+                    <div class="trade-chart-subtitle">Cumulative share by ranked partners</div>
+                    <!--<div id="partner-conc-chart"></div>-->
+                    <div>
+                        <div id="brush-tooltip">
+                            <div>
+                                <div id="brushtip-percentage"></div>
+                                <div id="brushtip-shared-by-text">SHARED BY TOP</div>
+                                <div id="brushtip-partners"></div>
+                                <!--<span id="brush-tooltip-percentage"></span> shared by top <span id="brush-tooltip-partner-count"></span> partners-->
+                            </div>
+                        </div>
+                        <div id="partner-conc-chart"></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div id="footer">United Nations, Office of Information Communication and Technology | Updated 14 July 2014</div>
+
+            </td>
+        </tr>
+    </table>
+
+
+    <!--<div class="grpah-title">
+        Graph 3: Partner concentration of trade in 2012
+    </div>
+    <div class="grpah-sub-title">
+        (Cumulative share by ranked partners)
+    </div>
+    <div>
+        <span><select id="country-selector"></select></span>
+    </div>-->
+
+    <div id='overlay' style="display:none"></div>
+    <div id='modal' style="display:none">
+        <div id='content'>
+            <div style="" id="#tbl-cntnr">
+                <table id="details-table-container"><tr><td></td></tr></table>
+            </div>
+        </div>
+        <a href='#' id='close'>close</a>
+    </div>
+
+    <div class="app-slide-in-hint"></div>
+
+    <!--<div>
+        <div id="brush-tooltip">
+            <div><span id="brush-tooltip-percentage"></span> shared by top <span id="brush-tooltip-partner-count"></span> partners</div>
+        </div>
+        &lt;!&ndash;<div id="partner-conc-chart"></div>&ndash;&gt;
+    </div>-->
+
+
+
+    <div id="tooltip">
+        <div id="tooltip-country-name"></div>
+        <div id="tooltip-partner-rank"></div>
+        <div><span id="tooltip-country-percentage"></span>&nbsp;&nbsp;<span id="tooltip-total-percentage"></span></div>
+    </div>
+
+    <div id="screen-mask">
+        <!--<img src="img/page-loading.gif" >-->
+    </div>
+
+
+
+</body>
+</html>

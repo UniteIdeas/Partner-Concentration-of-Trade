@@ -1,0 +1,502 @@
+body, text{
+    font-family: "Noto Sans", Arial, Helvetica;
+    font-size: 16px;
+    color : #3491CD;
+    margin : 0px;
+}
+
+.ui-widget{
+    font-family: "Noto Sans", Arial, Helvetica;
+}
+
+.country-chart-title{
+    padding-left : 20px;
+    padding-top : 20px;
+    padding-bottom:2em;
+    color:#999;
+    font-size:.8em;
+}
+
+.country-chart-subtitle{
+    padding-left : 20px;
+    padding-top : 1em;
+    padding-bottom: .4em;
+}
+
+.slected-country-name{
+    font-size : 2em;
+    font-weight:lighter;
+    color: #555555;
+}
+
+.trade-chart-caption{ /*SELECT GRAPH*/
+    font-weight:lighter;
+    padding-top:.8em;
+}
+
+.trade-chart-title{ /*PARTNER CONCENTRATION OF TRADE IN 2012*/
+    font-weight: bold;
+    font-size:1.8em
+}
+
+.trade-chart-subtitle{
+    font-weight:lighter;
+    font-size:1em;
+    color : #999999;
+}
+
+#partner-conc-chart{
+    margin-top: 30px;
+}
+
+.svg-text-right-align{
+    text-anchor: end;
+}
+
+
+.graph-type-title{
+    font-size : 13px;
+    /*font-weight: bold;*/
+    /*fill : #3491CD;*/
+    opacity : 0.7;
+}
+
+.left-row-bars{
+    cursor: pointer;
+    /*fill : #ABC3D3;*/
+    /*stroke-dasharray:4,2;*/
+    /*stroke : #FFF;*/
+    /*stroke-width : 0.5px;*/
+}
+
+.right-row-bars{
+    cursor: pointer;
+    /*fill : #4D6395;*/
+    /*stroke-dasharray:4,2;*/
+    /*stroke : #FFF;*/
+    /*stroke-width : 0.5px;*/
+}
+
+.graph-highlighted-rect-hover{
+    opacity: 0.7;
+    /*fill : orange;*/
+    fill : #F89C1A;
+}
+
+.axis text {
+    font-size: .8em;
+    fill : #bbb;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #bbb;
+    shape-rendering: crispEdges;
+    display: none;
+}
+
+.axis .straight-line-axis{
+    display: block;
+}
+
+.axis-path-invisible path{
+    display: none;
+}
+
+.axis-path-invisible .tick line, .axis .tick line{
+    display: none;
+}
+
+.x.label{
+    font-size:.8em;
+    fill:#666;
+}
+.bar {
+    fill: steelblue;
+    fill-opacity: .9;
+}
+
+.graph-type-main-caption{
+    font-size : 16px;
+}
+
+.brush-line{
+    stroke : #2C3E50;
+    /*stroke : #121343;*/
+    stroke-width : 1px;
+    /*opacity: 0.5;*/
+    shape-rendering: crispEdges;
+    /*stroke-dasharray:5,5;*/
+    /*cursor: e-resize;*/
+}
+
+.brush-star{
+    /*fill : #333;*/
+    fill : #2C3E50;
+}
+
+.chart-outer-container{
+    background-color: #F2F2F2;
+    /*overflow-y: scroll;*/
+    /*height: 500px;*/
+    /*width: 270px;*/
+}
+
+#country-chart{
+    overflow-y: scroll;
+    height: 500px;
+    width: 270px;
+}
+
+.dc-chart rect.deselected {
+    fill: #ccc;
+}
+
+
+.dc-chart rect{
+    fill: #3491CD;
+    cursor: pointer;
+    padding:.2em;
+}
+
+
+.dc-chart rect.selected {
+    fill: #95CDEF;
+    cursor: pointer;
+}
+
+.dc-chart g.row text {
+    cursor: pointer;
+    fill: #666;
+    font-size: .7em;
+}
+
+.filter-btn-selected {
+    background-color: #3491CD;
+    color: #FFFFFF;
+}
+.missions-btn {
+    /*background-color: #000000;*/
+    border-radius: 5px;
+    padding:2px;
+    margin: 0 18px 0 5px;
+    /*color: #808080;*/
+    cursor: pointer;
+    font-size: 10px;
+    opacity: 1;
+    text-align: center;
+    width: 50px;
+}
+
+.country-chart-sorting{
+    font-size : 11px;
+    padding-left : 20px;
+    padding-bottom: 1em;
+}
+
+.page-right-pane{
+    padding-left : 35px;
+    /*padding-top : 35px;*/
+}
+
+
+/*POPUP STYLES -----------------------------------------------------------*/
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.7;
+    filter: alpha(opacity=50);
+}
+
+#modal {
+    font-family: "Noto Sans", Arial, Helvetica;
+    position:fixed;
+    /*background:url(tint20.png) 0 0 repeat;*/
+    background:rgba(0,0,0,0.2);
+    border-radius:14px;
+    padding:8px;
+    box-shadow: 0px 0px 50px #000;
+}
+#details-table-container_value{
+    text-align:right;
+}
+.ui-icon-triangle-1-n{
+    background-position: 1px -16px;
+}
+
+.ui-jqgrid .ui-jqgrid-title{
+    padding-bottom:1em;
+}
+
+.ui-jqgrid tr.jqgrow td{
+    padding-left:.5em;
+}
+
+#content {
+    border-radius:8px;
+    background:#fff;
+    padding:20px;
+}
+
+#close {
+    position:absolute;
+    background:url(../img/close.png) 0 0 no-repeat;
+    width:24px;
+    height:27px;
+    display:block;
+    text-indent:-9999px;
+    top:-7px;
+    right:-7px;
+}
+
+.ui-widget-header{
+    background: none;
+    color : #000;
+    border : none;
+}
+
+.ui-widget-content{
+    border : none;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    background: none;
+    background-color: #F89C1A;
+    color : #fff;
+    border-left: 1px solid #ddd !important;
+    border-right: 1px solid #ddd !important;
+    border-top: 1px solid #ddd !important;
+}
+
+.ui-jqgrid .ui-jqgrid-htable th div{
+    height: auto;
+    /*line-height: 13px;*/
+    padding-top:2px;
+    font-weight: normal;
+    text-align: left;
+    font-size: 20px;
+    padding : 5px;
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+    background: none;
+}
+
+.ui-state-default .ui-jqgrid-hbox{
+    border : none;
+}
+
+
+.ui-th-ltr, .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr{
+    border: none !important;
+}
+
+.ui-jqgrid .ui-jqgrid-bdiv{
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.ui-jqgrid .ui-jqgrid-title{
+    color: #999999;
+    font-weight: normal;
+    font-size: 2em;
+}
+
+.ui-jqgrid .ui-jqgrid-titlebar-close span{
+    display: none;
+}
+
+.tbl-hdr-pt{
+    font-weight: bold;
+    color : #F89C1A;
+}
+.tbl-hdr-rt{
+    font-weight: bold;
+    color : #555;
+}
+.tbl-hdr-subtext{
+    font-size: .7em;
+}
+
+.ui-jqgrid .ui-jqgrid-titlebar p {
+    padding:0;
+    margin:0;
+}
+.ui-jqgrid tr.jqgrow td{
+    color : #999;
+    font-size: 14px;
+}
+
+/*OLD STYLES -----------------------------------------------------------*/
+.grpah-title{
+    font-size : 20px;
+    color : #110D79;
+}
+
+.grpah-sub-title{
+    font-size : 14px;
+    color : #666;
+}
+
+
+
+
+label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+
+/*.left-row-bars:hover{
+    opacity: 0.9;
+}
+
+.right-row-bars:hover{
+    opacity: 0.9;
+}*/
+
+
+
+.brush-handle{
+    stroke-width : 5px;
+    cursor: ew-resize;
+}
+
+.right-graph-v-line{
+    cursor: ew-resize;
+}
+
+.right-graph-h-line{
+    cursor: ns-resize;
+}
+
+.left-graph-v-line{
+    cursor: ew-resize;
+}
+
+.left-graph-h-line{
+    cursor: ns-resize;
+}
+
+#tooltip{
+    background-color: #2C3E50;
+    /*border : 1px solid #999999;*/
+    /*border-radius: 5px;*/
+    padding : 10px;
+    position: absolute;
+    /*width: 200px;*/
+    z-index: 99999;
+    visibility: hidden;
+    opacity: 0.9;
+}
+
+#tooltip-country-name{
+    color : #fff;
+    font-weight: bold;
+    font-size : 20px;
+    line-height: 20px;
+}
+
+#tooltip-partner-rank{
+    color : #fff;
+    font-weight: bold;
+    font-size : 12px;
+    margin-bottom : 3px;
+}
+
+#tooltip-country-percentage{
+color : #fff;
+font-weight: bold;
+font-size : 20px;
+/*text-align: center;*/
+    }
+
+
+#tooltip-total-percentage{
+    color : #fff;
+    font-weight: bold;
+    font-size : 20px;
+}
+
+#brush-tooltip{
+    background-color: #999999;
+    color : #ffffff;
+    /*border : 1px solid #999999;*/
+    /*border-radius: 5px;*/
+    /*text-align: center;*/
+    padding : 10px;
+    position: relative;
+    z-index: 99999;
+    visibility: hidden;
+    opacity: 0.9;
+    width :90px;
+    margin-left : -95px;
+}
+
+#brushtip-percentage{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#brushtip-shared-by-text{
+    margin-top : 3px;
+    font-size: 13px;
+}
+
+#brushtip-partners{
+    font-size: 20px;
+    line-height: 20px;
+}
+
+#screen-mask{
+    height: 100%;
+    width: 100%;
+    opacity: 0.75;
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    background: #000000 url(../img/page-loading.gif) no-repeat center center;
+}
+
+.ui-jqgrid tr.jqgrow td {
+    white-space: normal !important;
+}
+
+.app-slide-in-hint{
+    background-color: #eee;
+    opacity: 0.7;
+    border : 1px solid #fff;
+    border-radius: 5px;
+    color: #888;
+
+    padding : 2em;
+    /*position: absolute;*/
+    position: fixed;
+    top : 0px;
+    left : 500px;
+    display: none;
+
+    font-size : 1em;
+}
+
+#footer{
+    padding-left : 20px;
+    margin-top : 6em;
+    padding-bottom:2em;
+    color:#999;
+    font-size:.8em;
+}
